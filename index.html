@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <main class="w-25 shadow rounded p-3 mx-auto">
+        <h1>Find the area of triangle</h1>
+        <input type="number" name="" class="form-control mt-4 base" id="base" placeholder="Enter Base">
+        <input type="number" name="" class="form-control mt-4 height" id="height" placeholder="Enter Height">
+        <button class="btn btn-danger mt-4" onclick="Area()">Find Area</button>
+        <div class="mt-4" id="answer"></div>
+    </main>
+</body>
+
+</html>
+
+<script>
+
+    function Area() {
+        let base = document.getElementById("base").value;
+        let height = document.getElementById("height").value;
+
+        let answer = document.getElementById("answer").innerHTML = (0.5 * base * height);
+        alert(`The area of the triangle is ${answer}`);
+        console.log(`The area of the triangle is ${answer}`);
+
+
+
+    }
+</script>
