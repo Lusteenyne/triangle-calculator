@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+    
+    <title>Document</title>
+    <style>
+.carousel-con{
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+#imgCont{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+#imgBox{
+    min-width: 20%;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: yellow;
+}
+
+.img{
+    border-radius: 8px;
+
+}
+
+#prev-btn{
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50); */
+
+
+}
+
+#nextBtn{
+    margin-left: 80%;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <main class="carousel-con">
+        <div id="imgCont">
+            <div id="imgBox">
+                <img width="300px" height="300px" src="1 Kizz.jpeg" alt="" id="image1">
+            </div>
+            <div id="imgBox">
+                <img width="300px" height="300px" src="2 Kizz.jpeg" alt="" id="image2">
+            </div>
+            <div id="imgBox">
+                <img width="300px" height="300px" src="3 Kizz.jpeg" alt="" id="image3">
+            </div>
+            <div id="imgBox">
+                <img width="300px" height="300px" src="6 Kizz.jpeg" alt="" id="image4">
+            </div>
+        </div>
+        <button id="prevBtn"> Back</button>
+        <button id="nextBtn"> Next</button>
+    </main>
+</body>
+
+</html>
+
+<script>
+const  imgCont = document.getElementById("imgCont");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let index = 0;
+const imgWidth = document.getElementById("img-box").offsetWidth + 20;
+const totalImg = document.getElementById("img-box").length;
+
+
+nextBtn.addEventListener ("click", () => {
+    if (index < totalImg -1) {
+        index++;
+        imgCont.style.transform = `translateX(-${imgWidth *  index}px)`;
+        
+    }
+});
+prevBtn.addEventListener ("click", () => {
+    if (index > 0) {
+        index--;
+        imgCont.style.transform = `translateX(-${imgWidth *  index}px)`;
+        
+    }
+})
+
+</script>

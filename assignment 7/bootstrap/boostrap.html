@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+</head>
+<style>
+    .button-one {
+        width: 150px;
+    }
+</style>
+
+<body>
+    <!-- colors -->
+    <div class="text-danger">Welcome to Bootstrap</div>
+    <div class="text-success">Welcome to Bootstrap</div>
+    <div class="text-warning">Welcome to Bootstrap</div>
+    <div class="text-primary">Welcome to Bootstrap</div>
+    <div class="text-tertiary">Welcome to Bootstrap</div>
+    <div class="text-secondary">Welcome to Bootstrap</div>
+    <div class="text-dark">Welcome to Bootstrap</div>
+    <!-- to have a color white use text-light or text-white -->
+
+    <!-- background colors -->
+    <div class="bg-danger">Welcome to Bootstrap</div>
+    <div class="bg-success">Welcome to Bootstrap</div>
+    <div class="bg-warning">Welcome to Bootstrap</div>
+    <div class="bg-primary">Welcome to Bootstrap</div>
+    <div class="bg-tertiary">Welcome to Bootstrap</div>
+    <div class="bg-secondary">Welcome to Bootstrap</div>
+    <div class="bg-dark">Welcome to Bootstrap</div>
+    <!-- to have a color white use text-light or text-white -->
+
+    <!-- Font-size- fs -->
+    <div class="fs-1">Welcome to Bootstrap</div>
+    <div class="fs-2">Welcome to Bootstrap</div>
+    <div class="fs-3">Welcome to Bootstrap</div>
+    <div class="fs-4">Welcome to Bootstrap</div>
+    <div class="fs-5">Welcome to Bootstrap</div>
+
+    <!-- Font-weight- fw,fst-->
+    <div class="fw-bold">Welcome to Bootstrap</div>
+    <div class="fw-bolder">Welcome to Bootstrap</div>
+    <div class="fw-semibold">Welcome to Bootstrap</div>
+    <div class="fw-light">Welcome to Bootstrap</div>
+    <div class="fw-lighter">Welcome to Bootstrap</div>
+    <div class="fst-italic">Welcome to Bootstrap</div>
+
+    <!-- heading tags -->
+    <div class="h1">Welcome to Bootstrap</div>
+    <div class="h2">Welcome to Bootstrap</div>
+    <div class="h3">Welcome to Bootstrap</div>
+    <div class="h4">Welcome to Bootstrap</div>
+    <div class="h5">Welcome to Bootstrap</div>
+    <div class="h6">Welcome to Bootstrap</div>
+
+    <!-- display tags -->
+    <div class="display-1">Welcome to Bootstrap</div>
+    <div class="display-2">Welcome to Bootstrap</div>
+    <div class="display-3">Welcome to Bootstrap</div>
+    <div class="display-4">Welcome to Bootstrap</div>
+    <div class="display-5">Welcome to Bootstrap</div>
+    <div class="display-6">Welcome to Bootstrap</div>
+
+    <!-- text align -->
+    <div class="text-center">Welcome to Bootstrap</div>
+    <div class="text-start">Welcome to Bootstrap</div>
+    <div class="text-end">Welcome to Bootstrap</div>
+
+    <!-- width  25, 50, 75, 100-->
+    <div class="bg-warning w-25">Welcome to Bootstrap</div>
+    <div class="bg-danger w-50">Welcome to Bootstrap</div>
+    <div class="bg-success w-75">Welcome to Bootstrap</div>
+    <div class="bg-primary w-100">Welcome to Bootstrap</div>
+
+    <!-- height  25, 50, 75, 100-->
+    <div class="bg-danger text-light h-25">Welcome to Bootstrap</div>
+    <!-- <div class="bg-danger h-50">Welcome to Bootstrap</div>
+           <div class="bg-success h-75">Welcome to Bootstrap</div>
+           <div class="bg-primary h-100">Welcome to Bootstrap</div> -->
+
+    <div class="bg-warning w-50 text-light text-center">Welcome to Bootstrap</div>
+    <!-- margin m and padding p. margin-top= mt, margin-bottom=mb, margin-left=ms-, margin-right=me, margin left and right =mx, margin top and bottom==my->
+    <!- padding p. padding-top= pt, padding-bottom=pb, padding-left=ps-, padding-right=pe, padding left and right= px, padding top and bottom= py-->
+
+    <!-- text-decoration-->
+
+    <a href="" class="text-decoration-none">Bootstrap</a>
+    <a href="" class="text-decoration-underline">Bootstrap</a>
+    <a href="" class="text-decoration-line-through">Bootstrap</a>
+
+    <!-- Button= btn -->
+    <button class="btn btn-warning button-one">Bootstrap</button>
+    <button class="btn btn-success button-one">Bootstrap</button>
+    <button class="btn btn-danger button-one">Bootstrap</button>
+    <button class="btn btn-primary button-one">Bootstrap</button>
+    <button class="btn btn-secondary button-one">Bootstrap</button>
+
+    <!-- Border= border 1-5  -->
+    <div class="border">Bootstrap</div>
+    <div class="border border-2">Bootstrap</div>
+    <div class="border border-2 border-warning">Bootstrap</div>
+
+    <!-- Border radius -->
+    <div class="rounded bg-danger w-50">Bootstrap</div>
+    <div class="rounded-pill bg-primary w-50 ps-2">Bootstrap</div>
+    <div class="rounded-circle bg-warning w-25 p-5 ">Bootstrap</div>
+
+    <!-- Shadow -->
+    <div class="shadow w-25 bg-white">Bootstrap</div>
+    <div class=" shadow shadow-lg bg-warning mt-3">Bootstrap</div>
+    <div class="shadow-lg bg-warning mt-3">Bootstrap</div>
+
+    <!-- d-flex d-none d-block d-inline d-inline-flex -->
+    <!-- align-items-center align-items-end align-items-start -->
+    <!-- justify-content-center justify-content-between justify-content-evenly justify -->
+    <!-- flex-col flex-row flex-col-reverse -->
+    <!-- flex wrap -->
+    <!-- position-fixed position-sticky position-relative position-absolute -->
+    <!-- top 0-5, bottom 0-5, left 0-5, right 0-5 -->
+
+    <!-- row and column -->
+    <div class="container-fluid">
+
+
+        <div class="row ">
+            <!-- lg= large screen, md=medium screen d-sm= display on small screen-->
+            <div class="col-lg-3 d-lg-block d-md-none d-sm-none bg-warning">First column</div>
+            <div class="col-3 bg-danger">Second column</div>
+            <div class="col-3 bg-primary">Third column</div>
+            <div class="col-lg-3 col-md-6 bg-success">Fourth column</div>
+        </div>
+    </div>
+
+
+
+    <div class="container text-center">
+        <div class="row align-items-start bg-danger">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .color-tab{
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <section class="carouselOne">
+        <div class="color-tab" >
+            <button>
+                <span onclick="back()">Prev</span>
+            </button>
+            <button>
+                <span onclick="front()">Next</span>
+            </button>
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+    let carousel = document.querySelector(".carouselOne");
+    let colors = ["yellow", "black", "red", "yellowgreen", "brown"]
+    let arrIndex = 0
+
+
+    let updateCarousel = () => {
+        carousel.style.backgroundColor = colors[arrIndex]
+    }
+
+    let front = ()=>{
+        if (arrIndex === colors.length -1) {
+            arrIndex = 0
+            
+        }else{
+            arrIndex++
+        }
+        updateCarousel()
+    }
+        
+
+    let back= ()=>{
+        if (arrIndex = 0) {
+            arrIndex === colors.length -1
+            
+        }else{
+            arrIndex--
+        }
+        updateCarousel()
+    }
+
+    document.addEventListener("DOMContentLoaded", updateCarousel)
+        
+    
+</script>

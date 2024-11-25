@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+    
+    <title>Document</title>
+
+    <style>
+        /* body{
+            display: flex;
+    
+            
+        } */
+        .carouselOne{
+            height: 60vh;
+            width: 400px;
+            transition: backgroun-color 0.5s ease;
+        }
+    
+        .carouselTwo{
+            aspect-ratio: 1 / 1.9;
+            overflow: hidden;
+        }
+        .arrow,
+        .arrow-two{
+           
+            margin: auto;
+            top: 45%;
+            left: 0;
+        }
+
+        #btn-one-a{
+        margin-left: 5px;
+        background-color: aliceblue;
+    }
+    #btn-two-a{
+        margin-left: 530px;
+        background-color: aliceblue;
+    }
+        #btn-one{
+        margin-left: 5px;
+        background-color: aliceblue;
+    }
+    #btn-two{
+        margin-left: 140%;
+        background-color: aliceblue;
+    }
+        .img{
+            width: 20%;
+            aspect-ratio:  1 / 1.9;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+     <section class="carouselOne m-auto w-50 rounded shadown p-3 d-flex align-items-center position-relative">
+        <div class="arrow d-flex justify-content-between align-items-center position-absolute" >
+            <button class="btn px-3 py-2" id="btn-one-a">
+                <span class="material-symbols-outlined" onclick="prev()">Left</span>
+            </button>
+            <button class="btn px-3 py-2" id="btn-two-a" >
+                <span class="material-symbols-outlined" onclick="next()"> Right</span>
+            </button>
+        </div>
+     </section>
+
+     <section class="carouselTwo m-auto w-25 rounded shadown p-3 d-flex align-items-center position-relative">
+        <div class="arrow d-flex justify-content-between align-items-center position-absolute top-0" >
+            <img src="2 Kizz.jpeg"  width="400px" height="400px"  alt="">
+        </div>
+        <div class="arrow-two d-flex justify-content-between align-items-center position-absolute" >
+            <button class="btn px-3 py-2" id="btn-one">
+                <span class="material-symbols-outlined" onclick="back()">Left </span>
+            </button>
+            <button class="btn px-3 py-2" id="btn-two">
+                <span class="material-symbols-outlined" onclick="front()"> Right</span>
+            </button>
+        </div>
+            
+       
+     </section>
+</body>
+</html>
+
+<script>
+    let carousel = document.querySelector(".carouselOne")
+    let colors = ["Yellow", "Blue", "Black", "Yellowgreen"]
+    let arrIndex = 0
+    let myImages = ["2 Kizz.jpeg" , "5 KIzz.jpeg", "9 Kizz.jpeg", "13 Kizz.jpeg"]
+    let image = document.querySelector("img")
+
+    let updateCarousel = () => {
+        carousel.style.backgroundColor = colors[arrIndex]
+    }
+    let next = () => {
+        if (arrIndex === colors.length-1) {
+            arrIndex = 0
+        }else{
+            arrIndex++
+        }
+        updateCarousel()
+
+    }
+
+    let prev = () => {
+        if (arrIndex === 0) {
+            arrIndex = colors.length-1
+        }else{
+            arrIndex--
+        }
+        updateCarousel()
+    }
+
+
+
+    //image
+
+    let updateImgSrc = () => {
+        image.src = myImages [arrIndex]
+
+    }
+
+    let front = () => {
+        if (arrIndex === myImages.length - 1) {
+            arrIndex = 0
+        }else {
+            arrIndex++
+        }
+        updateImgSrc()
+    }
+    let back = () => {
+        if (arrIndex === 0) {
+            arrIndex = myImages.length-1
+        }else{
+            arrIndex--
+        }
+        updateImgSrc()
+    }
+    document.addEventListener("DOMContentLoaded", updateCarousel);
+    document.addEventListener("DOMContentLoaded", updateImgSrc);
+
+
+</script>

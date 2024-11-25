@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <section class="carouselOne">
+        <div>
+            <img src="5 Kizz.jpeg" alt="" width="300px" height="300px" >
+        </div>
+        <div>
+            <button>
+                <span onclick="prevBtn()">Prev</span>
+            </button>
+            <button>
+                <span onclick="nextBtn()">Next</span>
+            </button>
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+    // let carousel = document.querySelector(".carouselOne")
+    let myImages = ["14 Kizz.jpeg", "12 Kizz.jpeg", "21 Kizz.jpeg", "17 Kizz.jpeg"]
+    let arrIndex = 0
+    let image = document.querySelector("img")
+
+
+    let updateImgSrc = () => {
+        image.src = myImages [arrIndex]
+    }
+    let nextBtn = () => {
+        if (arrIndex === myImages.length -1) {
+            arrIndex = 0
+            
+        }else{
+            arrIndex++
+        }
+        updateImgSrc()
+    }
+
+    let prevBtn = () => {
+        if (arrIndex = 0) {
+            arrIndex === myImages.length -1
+            
+        }else{
+            arrIndex--
+        }
+        updateImgSrc()
+    }
+
+    document.addEventListener("DOMContentLoaded",updateImgSrc)
+</script>
